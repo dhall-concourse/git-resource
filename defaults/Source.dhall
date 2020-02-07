@@ -1,0 +1,19 @@
+{ branch = None Text
+, private_key = None Text
+, forward_agent = None Bool
+, username = None Text
+, password = None Text
+, paths = None (List Text)
+, ignore_paths = None (List Text)
+, skip_ssl_verification = None Bool
+, tag_filter = None Text
+, submodule_credentials = None ../types/SubmoduleCredentials.dhall
+, git_config = None (List ../types/GitConfigItem.dhall)
+, disable_ci_skip = None Bool
+, commit_verification_keys = None (List Text)
+, commit_verification_key_ids = None (List Text)
+, gpg_keyserver = None Text
+, git_crypt_key = None Text
+, https_tunnel = None ../types/HttpsTunnel.dhall
+, commit_filter = None ../types/CommitFilter.dhall
+}
