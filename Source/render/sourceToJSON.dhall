@@ -1,10 +1,10 @@
-let Prelude = ../deps/prelude.dhall
+let Prelude = ../../deps/prelude.dhall
 
 let JSON = Prelude.JSON
 
-let RenderOptional = ../deps/render-optionals.dhall
+let RenderOptional = ../../deps/render-optionals.dhall
 
-in    λ(git : ../types/Source.dhall)
+in    λ(git : ../types/Type.dhall)
     → Some
         ( toMap
             { uri = JSON.string git.uri
