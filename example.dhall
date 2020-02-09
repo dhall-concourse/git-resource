@@ -26,6 +26,16 @@ in  [ Concourse.schemas.Job::{
                   , submodules = Some Git.InParams.Submodules.All
                   }
             }
+        , Concourse.helpers.putStep
+            Concourse.schemas.PutStep::{
+            , resource = resource
+            , params =
+                Git.OutParams.render
+                  Git.OutParams::{
+                  , repository = resource.name
+                  , rebase = Some True
+                  }
+            }
         ]
       }
     ]
