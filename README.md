@@ -89,7 +89,7 @@ let Git =
 let myGitResource = ./resource-defined-earlier.dhall
 
 let putStep =
-    -- Use Git.OutParams to define params for get
+    -- Use Git.OutParams to define params for put
     -- And use Git.OutParams.render to render it as `Optional (Prelude.Map.Type Text Prelude.JSON.Type)`
       Concourse.helpers.putStep
         Concourse.schemas.PutStep::{

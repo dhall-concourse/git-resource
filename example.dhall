@@ -34,7 +34,7 @@ let get =
         }
 
 let put =
-    -- Use Git.OutParams to define params for get
+    -- Use Git.OutParams to define params for put
     -- And use Git.OutParams.render to render it as `Optional (Prelude.Map.Type Text Prelude.JSON.Type)`
       Concourse.helpers.putStep
         Concourse.schemas.PutStep::{
