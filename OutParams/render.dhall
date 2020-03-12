@@ -20,7 +20,7 @@ in    λ(p : ./Type.dhall)
                   ./Returning.dhall
                   renderReturning
                   p.returning
-            , tag = RenderOptional.bool p.tag
+            , tag = RenderOptional.text p.tag
             , only_tag = RenderOptional.bool p.only_tag
             , tag_prefix = RenderOptional.text p.tag_prefix
             , force = RenderOptional.bool p.force

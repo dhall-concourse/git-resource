@@ -2,7 +2,7 @@
 , rebase : Optional Bool
 , merge : Optional Bool
 , returning : Optional ./Returning.dhall
-, tag : Optional Bool
+, tag : Optional Text
 , only_tag : Optional Bool
 , tag_prefix : Optional Text
 , force : Optional Bool
