@@ -4,8 +4,8 @@ let JSON = Prelude.JSON
 
 let RenderOptional = ../../deps/render-optionals.dhall
 
-in    λ(git : ../types/Type.dhall)
-    → Some
+in  λ(git : ../types/Type.dhall) →
+      Some
         ( toMap
             { uri = JSON.string git.uri
             , branch = RenderOptional.text git.branch
@@ -21,8 +21,8 @@ in    λ(git : ../types/Type.dhall)
             , submodule_credentials =
                 RenderOptional.generic
                   ../types/SubmoduleCredentials.dhall
-                  (   λ(creds : ../types/SubmoduleCredentials.dhall)
-                    → JSON.object
+                  ( λ(creds : ../types/SubmoduleCredentials.dhall) →
+                      JSON.object
                         ( toMap
                             { host = JSON.string creds.host
                             , username = JSON.string creds.username
@@ -34,8 +34,8 @@ in    λ(git : ../types/Type.dhall)
             , git_config =
                 RenderOptional.lists.generic
                   ../types/GitConfigItem.dhall
-                  (   λ(cfg : ../types/GitConfigItem.dhall)
-                    → JSON.object
+                  ( λ(cfg : ../types/GitConfigItem.dhall) →
+                      JSON.object
                         ( toMap
                             { name = JSON.string cfg.name
                             , value = JSON.string cfg.value
@@ -53,8 +53,8 @@ in    λ(git : ../types/Type.dhall)
             , https_tunnel =
                 RenderOptional.generic
                   ../types/HttpsTunnel.dhall
-                  (   λ(https_tunnel : ../types/HttpsTunnel.dhall)
-                    → JSON.object
+                  ( λ(https_tunnel : ../types/HttpsTunnel.dhall) →
+                      JSON.object
                         ( toMap
                             { proxy_host = JSON.string https_tunnel.proxy_host
                             , proxy_port = JSON.string https_tunnel.proxy_port
@@ -69,8 +69,8 @@ in    λ(git : ../types/Type.dhall)
             , commit_filter =
                 RenderOptional.generic
                   ../types/CommitFilter.dhall
-                  (   λ(commit_filter : ../types/CommitFilter.dhall)
-                    → JSON.object
+                  ( λ(commit_filter : ../types/CommitFilter.dhall) →
+                      JSON.object
                         ( toMap
                             { exclude =
                                 RenderOptional.lists.text commit_filter.exclude

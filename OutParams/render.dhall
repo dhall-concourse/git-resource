@@ -5,16 +5,16 @@ let JSON = Prelude.JSON
 let RenderOptional = ../deps/render-optionals.dhall
 
 let renderReturning =
-        λ(returning : ./Returning.dhall)
-      → JSON.string
+      λ(returning : ./Returning.dhall) →
+        JSON.string
           (merge { Merged = "merged", Unmerged = "unmerged" } returning)
 
-in    λ(p : ./Type.dhall)
-    → Some
+in  λ(p : ./Type.dhall) →
+      Some
         ( toMap
             { repository = JSON.string p.repository
             , rebase = RenderOptional.bool p.rebase
-            , merge = RenderOptional.bool p.merge
+            , `merge` = RenderOptional.bool p.`merge`
             , returning =
                 RenderOptional.generic
                   ./Returning.dhall

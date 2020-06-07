@@ -5,6 +5,6 @@
       ./defaults/Source.dhall sha256:4bd6fcf80a6220076c03bb4ae47dedd128f5a09a1af926a67ae0760ce80c4312
     ? ./defaults/Source.dhall
 , render =
-      ./render/sourceToJSON.dhall sha256:803f8f3f9cafce273cbebcc122516866c7d468eebf46420ca927d344a1a722f3
+      ./render/sourceToJSON.dhall sha256:38756481e120629187c4233669ef4c604013b86895ec56c8542d51c97dd380e1
     ? ./render/sourceToJSON.dhall
 }

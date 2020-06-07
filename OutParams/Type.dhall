@@ -1,6 +1,6 @@
 { repository : Text
 , rebase : Optional Bool
-, merge : Optional Bool
+, `merge` : Optional Bool
 , returning : Optional ./Returning.dhall
 , tag : Optional Text
 , only_tag : Optional Bool

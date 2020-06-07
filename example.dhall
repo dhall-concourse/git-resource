@@ -24,7 +24,7 @@ let get =
     -- And use Git.InParams.render to render it as `Optional (Prelude.Map.Type Text Prelude.JSON.Type)`
       Concourse.helpers.getStep
         Concourse.schemas.GetStep::{
-        , resource = resource
+        , resource
         , params =
             Git.InParams.render
               Git.InParams::{
@@ -38,7 +38,7 @@ let put =
     -- And use Git.OutParams.render to render it as `Optional (Prelude.Map.Type Text Prelude.JSON.Type)`
       Concourse.helpers.putStep
         Concourse.schemas.PutStep::{
-        , resource = resource
+        , resource
         , params =
             Git.OutParams.render
               Git.OutParams::{ repository = resource.name, rebase = Some True }

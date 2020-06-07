@@ -4,20 +4,20 @@ let JSON = Prelude.JSON
 
 let RenderOptional = ../deps/render-optionals.dhall
 
-in    λ(p : ./Type.dhall)
-    → Some
+in  λ(p : ./Type.dhall) →
+      Some
         ( toMap
             { depth = RenderOptional.natural p.depth
             , submodules =
                 RenderOptional.generic
                   ./Submodules.dhall
-                  (   λ(s : ./Submodules.dhall)
-                    → merge
+                  ( λ(s : ./Submodules.dhall) →
+                      merge
                         { None = JSON.string "none"
                         , All = JSON.string "all"
                         , Selected =
-                              λ(xs : List Text)
-                            → JSON.array
+                            λ(xs : List Text) →
+                              JSON.array
                                 (Prelude.List.map Text JSON.Type JSON.string xs)
                         }
                         s
