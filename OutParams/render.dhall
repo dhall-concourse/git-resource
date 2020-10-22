@@ -26,5 +26,6 @@ in  λ(p : ./Type.dhall) →
             , force = RenderOptional.bool p.force
             , annotate = RenderOptional.text p.annotate
             , notes = RenderOptional.text p.notes
+            , branch = RenderOptional.text p.branch
             }
         )

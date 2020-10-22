@@ -5,6 +5,6 @@
       ./InParams/package.dhall sha256:1d9335b074774677ce58495a9462bc3ca8adf05c27dcf01384a52926901f4051
     ? ./InParams/package.dhall
 , OutParams =
-      ./OutParams/package.dhall sha256:0ef22d68d05424fa3f78f4737ad2303a2149193caeeb411556f45ce44b9150bb
+      ./OutParams/package.dhall sha256:f2bb225e38544f525cbb04b4bd75ef4d57396d4042e4d8e55949f56dcf0b3b4f
     ? ./OutParams/package.dhall
 }

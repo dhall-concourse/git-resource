@@ -7,4 +7,5 @@
 , force = None Bool
 , annotate = None Text
 , notes = None Text
+, branch = None Text
 }

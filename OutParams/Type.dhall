@@ -8,4 +8,5 @@
 , force : Optional Bool
 , annotate : Optional Text
 , notes : Optional Text
+, branch : Optional Text
 }
